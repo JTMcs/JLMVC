@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setTitle("Animal Fun");
+
         mNoise = MediaPlayer.create(getApplicationContext(), R.raw.cat);
 
         btnNew = (Button) findViewById(R.id.btn1);
