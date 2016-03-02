@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int nRan;
-    String sAns;
+    int nRan, resID;
+    String sAns, sAnml;
     EditText etAns;
     Button btnNew, btnLstn, btnCnfm;
     MediaPlayer mNoise;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Animal Fun");
 
         mNoise = MediaPlayer.create(getApplicationContext(), R.raw.cat);
+        mNoise.start();
 
         btnNew = (Button) findViewById(R.id.btn1);
         btnNew.setOnClickListener(GiveUp);
@@ -49,11 +50,10 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             etAns.setText("");
             nRan = (int) Math.floor(Math.random() * 14);
-            String sAnml = arsAnml[nRan];
-            int resID = getResources().getIdentifier(sAnml, "raw", getPackageName());
+            sAnml = arsAnml[nRan];
+            resID = getResources().getIdentifier(sAnml, "raw", getPackageName());
             mNoise = MediaPlayer.create(getApplicationContext(), resID);
             mNoise.start();
-
         }
     };
 
@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 tCor.show();
                 etAns.setText("");
                 nRan = (int) Math.floor(Math.random() * 14);
-                String sAnml = arsAnml[nRan];
-                int resID = getResources().getIdentifier(sAnml, "raw", getPackageName());
+                sAnml = arsAnml[nRan];
+                resID = getResources().getIdentifier(sAnml, "raw", getPackageName());
                 mNoise = MediaPlayer.create(getApplicationContext(), resID);
                 mNoise.start();
             } else {
@@ -80,5 +80,3 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 }
-
-

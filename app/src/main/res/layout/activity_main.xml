@@ -39,29 +39,27 @@
         android:layout_alignStart="@+id/textView" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="110dp"
         android:text="Confirm"
         android:id="@+id/btn3"
         android:layout_below="@+id/etAns"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="110dp"
         android:text="Give Up"
         android:id="@+id/btn1"
         android:layout_below="@+id/btn2"
-        android:layout_alignLeft="@+id/btn3"
-        android:layout_alignStart="@+id/btn3" />
+        android:layout_alignLeft="@+id/btn2"
+        android:layout_alignStart="@+id/btn2" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="110dp"
         android:text="Listen"
         android:id="@+id/btn2"
         android:layout_below="@+id/btn3"
-        android:layout_alignLeft="@+id/btn1"
-        android:layout_alignStart="@+id/btn1"
-        android:layout_marginTop="87dp" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
